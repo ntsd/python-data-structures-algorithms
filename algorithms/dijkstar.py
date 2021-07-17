@@ -47,15 +47,3 @@ def dijkstar_shortest_path(
         if not queue:
             break
     return shortest
-
-if __name__ == '__main__':
-    graph = {}
-    graph['A'] = {}
-    graph['B'] = {}
-    graph['C'] = {}
-    graph['D'] = {}
-    graph['A']['B'] = ([], 2)
-    graph['A']['C'] = ([], 4)
-    graph['B']['D'] = ([], 5)
-    graph['C']['D'] = ([], 2)
-    print('shortest path', dijkstar_shortest_path(graph, 'A', 'D', cost=lambda x: -x[1]))
